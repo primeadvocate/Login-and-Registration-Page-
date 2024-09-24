@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registeration Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+<body>
+    
+    <section class="bg-gray-50 min-h-screen flex items-center justify-center">
+        <!----------------------CONTAINER------------------------>
+
+        <div class="bg-gray-100 flex rounded-2xl shadow-2xl max-w-3xl p-5 items-center" id="formWrapper">
+
+        <!-------------------------FORM----------------------->    
+            <div class="px-4">
+                <h2 class="font-bold text-2xl text-[#00113B] text-center">Register Here</h2>
+                <p class="text-center text-sm text-[#00113B]">Create an Account, It's Free and Easy.</p>
+                <form action="#" class="flex flex-col gap-4">
+                    <div id="loginGrid" class="grid grid-cols-2 items-center gap-2">
+                        <input type="text" name="firstName" class="p-2 mt-4 rounded-xl border" placeholder="First Name" id="firstname">
+                        <input type="text" name="lastName" class="p-2 mt-4 rounded-xl border" placeholder="Last Name" id="lastname">
+                    </div>
+                    <input type="email" name="email" id="email" class="p-2 mt-4 rounded-xl border" placeholder="Email">
+
+                    <div class=" justify-center items-center relative">
+                    <input type="password" name="password" id="password" placeholder="Password" class="w-full p-2 mt-4 rounded-xl border" onkeyup="verifyRegexPassword()">
+                    <div class="bottom-1.5 -translate-y-1.5 absolute right-2 cursor-pointer">
+                    <i class="fa fa-eye" onclick="passwordReveal()" id="eye-icon"></i>
+                    </div>
+                </div>
+                <span id="warningRegex" class="text-sm p-2" style="width: 400px;"></span>
+
+                    <input type="text" name="verify-password" id="verify-password" placeholder="Verify Password" class="p-2 -mt-3 rounded-xl border" onkeyup="verifyPassword()">
+                    <span id="warning"></span>
+
+                    <button class="bg-[#00113B] text-white rounded-xl py-2 hover:scale-105 duration-300" id="toggle" onclick="checkUserExists()">Register</button>
+                </form>
+
+                <div class="text-sm flex gap-2 items-center mt-4 justify-center text-[#00113B]">
+                    <p>Already Have an Account?</p>
+                    <button class="bg-white border rounded-xl p-2 text-xs hover:scale-110 duration-300 hover:bg-[#00113B] hover:text-white" onclick="location.href = 'login.html';" >Login</button>
+                </div>
+
+            </div>
+
+            
+            <!----------------------IMAGE------------------------->
+            <div class="w-2/3 md:block hidden">
+                <img src="art.jpg" alt="" class="rounded-xl">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="tailwind2.js"></script>
+
+</body>
+</html>
